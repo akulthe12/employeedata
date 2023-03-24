@@ -1,0 +1,84 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>view_quilt</mat-icon>
+  </button>
+  <span style="font-size: 24px; font-weight: bold; color: #b517ee; margin-left: 8px;">Kanishka<span style="color: #262427;">Software</span></span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="warn" (click)="openDialog()">Add New Employee</button>
+  </mat-toolbar>
+  
+    <div class="container">
+   <div style="margin-top: 10px;" >
+    <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Enter a field name" #input>
+      </mat-form-field>  
+      
+       <div class="mat-elevation-z8">
+        <table cdkDropList (cdkDropListDropped)="onDrop($event)" mat-table [dataSource]="dataSource" matSort>
+            <ng-container matColumnDef="firstname">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name</th>
+                <td mat-cell *matCellDef="let row" cdkDrag> {{row.firstname}} </td>
+              </ng-container>
+              <ng-container matColumnDef="lastname">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</th>
+                <td mat-cell *matCellDef="let row" cdkDrag> {{row.lastname}} </td>
+              </ng-container>
+              <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Email ID</th>
+                <td mat-cell *matCellDef="let row" cdkDrag> {{row.email}} </td>
+              </ng-container>
+          <ng-container matColumnDef="dob">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Date of Birth</th>
+            <td mat-cell *matCellDef="let row" cdkDrag> {{row.dob}} </td>
+          </ng-container>
+          <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Gender</th>
+            <td mat-cell *matCellDef="let row" cdkDrag> {{row.gender}} </td>
+          </ng-container>
+          <ng-container matColumnDef="education">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Education</th>
+            <td mat-cell *matCellDef="let row" cdkDrag> {{row.education}} </td>
+          </ng-container>
+          <ng-container matColumnDef="company">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Company</th>
+            <td mat-cell *matCellDef="let row" cdkDrag> {{row.company}} </td>
+          </ng-container>
+          <ng-container matColumnDef="experience">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Experience</th>
+            <td mat-cell *matCellDef="let row" cdkDrag> {{row.experience}} </td>
+          </ng-container>
+          <ng-container matColumnDef="package">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>package</th>
+            <td mat-cell *matCellDef="let row" cdkDrag> {{row.package}} </td>
+          </ng-container>
+         
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+            <td mat-cell *matCellDef="let row">
+             <button mat-icon-button (click)="editEmployee(row)" color="primary">
+                <mat-icon>edit</mat-icon>
+             </button>
+             <button mat-icon-button  (click)="deleteDetails(row.id)" color="warn">
+              <mat-icon>delete</mat-icon>
+           </button>
+             </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;" cdkDrag></tr>
+      
+         
+         <tr  class="mat-row" *matNoDataRow cdkDrag>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+          </tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </div>
+
+    </div>
+   </div> 
+    
+
+  

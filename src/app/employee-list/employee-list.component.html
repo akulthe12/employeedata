@@ -1,0 +1,62 @@
+<form [formGroup]="newEmployeeForm">
+  <mat-form-field appearance="outline">
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="firstname" required>
+    <mat-error *ngIf="newEmployeeForm.get('firstName')?.invalid">Please enter a first name</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="lastname" required>
+    <mat-error *ngIf="newEmployeeForm.get('lastName')?.invalid">Please enter a last name</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" type="email" required>
+    <mat-error *ngIf="newEmployeeForm.get('email')?.invalid">Please enter a valid email address</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Date of Birth</mat-label>
+    <input matInput formControlName="dob" (change)="onDateSelected($event)">
+    <p>{{birthday|date:'MMM d, y'}}</p>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Gender</mat-label>
+    <mat-select formControlName="gender">
+      <mat-option value="Male">Male</mat-option>
+      <mat-option value="Female">Female</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Education</mat-label>
+    <mat-select formControlName="education" required>
+      <mat-option value="Matric">Matric</mat-option>
+      <mat-option value="Diploma">Diploma</mat-option>
+      <mat-option value="Intermediate">Intermediate</mat-option>
+      <mat-option value="Graduate">Graduate</mat-option>
+      <mat-option value="Post Graduate">Post Graduate</mat-option>
+    </mat-select>
+    <mat-error *ngIf="newEmployeeForm.get('education')?.invalid">Please select an education level</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Company</mat-label>
+    <input matInput formControlName="company" required>
+    <mat-error *ngIf="newEmployeeForm.get('company')?.invalid">Please enter the employee's company name</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Experience</mat-label>
+    <input matInput formControlName="experience" required>
+    <mat-error *ngIf="newEmployeeForm.get('experience')?.invalid">Please enter the employee's Experience
+      details</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Package</mat-label>
+    <input matInput formControlName="package" required>
+    <mat-error *ngIf="newEmployeeForm.get('package')?.invalid">Please enter the employee's package details</mat-error>
+  </mat-form-field>
+  <div mat-dialog-action [align]="'center'">
+    <button class="btn1" mat-raised-button color="warn" (click)="save()">{{actionBtn}}</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" mat-dialog-close>Close</button>
+  </div>
+
+</form>

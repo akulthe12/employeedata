@@ -1,0 +1,124 @@
+{
+  "empdb": [
+    {
+      "firstname": "archana",
+      "lastname": "kulthe",
+      "email": "archana@gmail.com",
+      "dob": "1995-12-09",
+      "gender": "Female",
+      "education": "Matric",
+      "company": "sasken",
+      "experience": "2",
+      "package": "4",
+      "id": 1
+    },
+    {
+      "firstname": "a",
+      "lastname": "k",
+      "email": "a@gmail.com",
+      "dob": "1996-09-09",
+      "gender": "Male",
+      "education": "Matric",
+      "company": "abc",
+      "experience": "3",
+      "package": "4",
+      "id": 2
+    },
+    {
+      "firstname": "AK",
+      "lastname": "K",
+      "email": "ak@gmail.com",
+      "dateOfBirth": "1998-09-12",
+      "gender": "Female",
+      "education": "Post Graduate",
+      "company": "xyz",
+      "experience": "3",
+      "package": "6",
+      "id": 3
+    },
+    {
+      "firstname": "pooja",
+      "lastname": "k",
+      "email": "pooja@gmail.com",
+      "dob": "0995-03-03",
+      "gender": "Female",
+      "education": "Graduate",
+      "company": "pqr",
+      "experience": "2",
+      "package": "4",
+      "id": 4
+    },
+    {
+      "firstname": "c",
+      "lastname": "d",
+      "email": "c@gmail.com",
+      "dob": "1995-09-09",
+      "gender": "Female",
+      "education": "Graduate",
+      "company": "def",
+      "experience": "3",
+      "package": "5",
+      "id": 5
+    },
+    {
+      "firstname": "pankaj",
+      "lastname": "kulthe",
+      "email": "pankaj@gmail.com",
+      "dob": "1997-12-12",
+      "gender": "Male",
+      "education": "Graduate",
+      "company": "sbc",
+      "experience": "3",
+      "package": "5",
+      "id": 6
+    },
+    {
+      "firstname": "abc",
+      "lastname": "xyz",
+      "email": "a@gmail.com",
+      "dob": "1998-02-02",
+      "gender": "Female",
+      "education": "Post Graduate",
+      "company": "abcxde",
+      "experience": "3",
+      "package": "6",
+      "id": 7
+    },
+    {
+      "firstname": "a",
+      "lastname": "b",
+      "email": "aaa@gmail.com",
+      "dob": "1995-03-03",
+      "gender": "Female",
+      "education": "Graduate",
+      "company": "erw",
+      "experience": "3",
+      "package": "6",
+      "id": 8
+    },
+    {
+      "firstname": "divya",
+      "lastname": "p",
+      "email": "divya@gmail.com",
+      "dob": "11/06/1996",
+      "gender": "Female",
+      "education": "Diploma",
+      "company": "abc",
+      "experience": "1",
+      "package": "3",
+      "id": 9
+    },
+    {
+      "firstname": "l",
+      "lastname": "k",
+      "email": "aa@gmail.com",
+      "dob": "Jan 02 1995",
+      "gender": "Male",
+      "education": "Matric",
+      "company": "abc",
+      "experience": "4",
+      "package": "9",
+      "id": 10
+    }
+  ]
+}
